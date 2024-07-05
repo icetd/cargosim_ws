@@ -1,0 +1,12 @@
+<robot name="mycar" xmlns:xacro="http://wiki.ros.org/xacro">
+    <xacro:include filename="head.xacro" />
+    <xacro:include filename="base.urdf.xacro" />
+    <xacro:include filename="camera.urdf.xacro" />
+    <xacro:include filename="laser.urdf.xacro" />
+    <xacro:include filename="imu.urdf.xacro" />
+
+    <xacro:include filename="../../gazebo/move.xacro" />
+    <xacro:include filename="../../gazebo/camera.xacro" />
+    <xacro:include filename="../../gazebo/imu.xacro" />
+    <xacro:include filename="../../gazebo/laser.xacro" />
+</robot>

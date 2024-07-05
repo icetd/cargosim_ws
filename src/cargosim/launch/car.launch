@@ -1,0 +1,14 @@
+<launch>
+    <param name="robot_description" command="$(find xacro)/xacro $(find cargosim)/urdf/xacro/car.urdf.xacro" />
+
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+	<param name="/use_sim_time" value="true" />
+        <arg name="world_name" value="$(find cargosim)/worlds/nav.world" />
+    </include>
+
+    <node pkg="gazebo_ros" type="spawn_model" name="model" args="-urdf -model mycar -param robot_description"  />
+
+    <!--发布机器人的状态-->
+    <node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher" output="screen" />
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen" />
+</launch>

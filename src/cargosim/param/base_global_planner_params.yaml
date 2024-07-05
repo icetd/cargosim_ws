@@ -1,0 +1,5 @@
+base_global_planner: "segment_global_planner/SegmentGlobalPlanner"
+planner_frequency: 0.0
+planner_patience: 1.0
+
+
